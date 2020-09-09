@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#041e26" />
+        <meta
+            name="description"
+            content="RYC Global is a community organisation intended to serve the society via campaigns, spreading education, awareness and help to those in need."
+        />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +24,127 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&family=Poppins:wght@300;600;700&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&family=Poppins:wght@300;600;700&display=swap"
+        />
+        <style>
+            .loading {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: var(--primary-color);
+                z-index: 10;
+                transition: opacity 500ms ease, z-index 400ms ease;
+                overflow: hidden;
+            }
+            .loading.hide {
+                opacity: 0;
+                z-index: -10;
+            }
+
+            #loader {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -2.7em;
+                margin-left: -2.7em;
+                width: 5.4em;
+                height: 5.4em;
+                background-color: var(--primary-color);
+            }
+
+            #hill {
+                position: absolute;
+                width: 7.1em;
+                height: 7.1em;
+                top: 1.7em;
+                left: 1.7em;
+                background-color: transparent;
+                border-left: 0.25em solid whitesmoke;
+                transform: rotate(45deg);
+            }
+
+            #hill:after {
+                content: "";
+                position: absolute;
+                width: 7.1em;
+                height: 7.1em;
+                left: 0;
+                background-color: var(--primary-color);
+            }
+
+            #box {
+                position: absolute;
+                left: 0;
+                bottom: -0.1em;
+                width: 1em;
+                height: 1em;
+                background-color: var(--primary-color);
+                border: 0.25em solid whitesmoke;
+                border-radius: 15%;
+                transform: translate(0, -1em) rotate(-45deg);
+                animation: push 1.5s cubic-bezier(0.79, 0, 0.47, 0.97) infinite;
+            }
+
+            @keyframes push {
+                0% {
+                    transform: translate(0, -1em) rotate(-45deg);
+                }
+                5% {
+                    transform: translate(0, -1em) rotate(-50deg);
+                }
+                20% {
+                    transform: translate(1em, -2em) rotate(47deg);
+                }
+                25% {
+                    transform: translate(1em, -2em) rotate(45deg);
+                }
+                30% {
+                    transform: translate(1em, -2em) rotate(40deg);
+                }
+                45% {
+                    transform: translate(2em, -3em) rotate(137deg);
+                }
+                50% {
+                    transform: translate(2em, -3em) rotate(135deg);
+                }
+                55% {
+                    transform: translate(2em, -3em) rotate(130deg);
+                }
+                70% {
+                    transform: translate(3em, -4em) rotate(217deg);
+                }
+                75% {
+                    transform: translate(3em, -4em) rotate(220deg);
+                }
+                100% {
+                    transform: translate(0, -1em) rotate(-225deg);
+                }
+            }
+        </style>
+        <title>RYC Global</title>
+    </head>
+    <body class="no-scroll">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="loader-container" class="loading">
+            <div id="loader">
+                <div id="box"></div>
+                <div id="hill"></div>
+            </div>
+        </div>
+        <div id="root"></div>
+        <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -38,6 +153,5 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    --></body>
 </html>
