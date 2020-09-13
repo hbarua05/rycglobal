@@ -1,0 +1,107 @@
+.footer {
+    background: linear-gradient(0deg, #00090c, #011320);
+    padding: 20px var(--side-space) 20px var(--side-space);
+    text-align: center;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    margin: 0px auto 40px auto;
+}
+
+.footer__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(90%);
+    transition: all 90ms ease-out;
+}
+
+.footer__icon:hover {
+    filter: brightness(500%);
+    transition: all 90ms ease-out;
+}
+
+.footer__cta-btn {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    border: 2px solid white;
+    color: white;
+    filter: brightness(85%);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 100ms ease-in;
+}
+
+.footer__cta-btn:hover {
+    filter: none;
+    background-color: #fff;
+    color: var(--accent-color);
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    margin: 30px auto 0px auto;
+}
+
+.footer__link {
+    font-family: "Noto Sans JP", sans-serif;
+    /* font-weight: 700; */
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    filter: brightness(85%);
+    transition: all 100ms ease-out;
+}
+
+.footer__link:hover,
+.footer__link.active {
+    text-decoration: underline;
+    filter: brightness(500%);
+    transition: all 100ms ease-out;
+}
+
+.copyright {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 12px;
+    padding: 0px var(--side-space) 15px var(--side-space);
+    background-color: #00090c;
+    color: rgb(219, 219, 219);
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    .footer__socials {
+        width: 60%;
+    }
+
+    .footer__links {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__links {
+        flex-direction: column-reverse;
+        height: 200px;
+    }
+
+    .footer__link {
+        font-size: 16px;
+    }
+}
