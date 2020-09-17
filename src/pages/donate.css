@@ -1,0 +1,44 @@
+.donate {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.note {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.donate ul {
+    list-style-type: none;
+}
+
+.donate__method,
+.donate__info {
+    font-family: "Noto Sans JP", sans-serif;
+}
+.donate__method {
+    font-size: 26px;
+    padding: 20px 0px;
+    background: var(--secondary-heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.donate__info {
+    font-size: 20px;
+    padding: 2px;
+}
+
+.donate img {
+    width: 50px;
+    margin: 20px 20px 0 0;
+}
+
+.donate__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
