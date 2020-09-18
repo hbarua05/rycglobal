@@ -1,0 +1,134 @@
+.workyear {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: var(--secondary-color);
+    background: var(--secondary-heading-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.work {
+    margin-bottom: 80px;
+}
+
+.work__title {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0px 100px 0px;
+}
+
+.work__title::after {
+    width: 180px;
+    bottom: -10px;
+}
+.work__card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work__card.reverse {
+    flex-direction: row-reverse;
+}
+
+.work__img {
+    width: 500px;
+    border-radius: 20px;
+}
+
+.work__description {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work__text {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--text-color);
+    text-align: justify;
+    line-height: 30px;
+}
+
+.work__button {
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 70px;
+}
+
+@media (max-width: 1200px) {
+    .work__img {
+        width: 400px;
+    }
+
+    .work__button {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .workyear {
+        margin-bottom: 40px;
+    }
+
+    .work {
+        box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 20px 10px 45px 10px;
+        margin-bottom: 80px;
+    }
+
+    .work__title {
+        font-size: 35px;
+        margin: 0 0 0 0;
+    }
+
+    .work__img {
+        margin: 50px 0 30px 0;
+    }
+
+    .work__card,
+    .work__card.reverse {
+        flex-direction: column;
+        align-items: center;
+        /* box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.3);
+        border-radius: 20px; */
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .work__description {
+        width: 100%;
+    }
+
+    .work__text {
+        text-align: justify;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .work {
+        margin-bottom: 40px;
+    }
+
+    .work__title {
+        font-size: 28px;
+    }
+
+    .work__img {
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    .work__text {
+        font-size: 18px;
+        text-align: center;
+    }
+}
