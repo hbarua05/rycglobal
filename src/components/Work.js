@@ -78,7 +78,7 @@ let workItemsnineteen = [
         img: "tree.jpg",
         imgwebp: "tree.webp",
         description:
-            "1000 Tree Plantation Campaign; Over a thousand trees were planted across the port city of Chittagong to support the movement of the renowned Youtuber, Mr Breast.",
+            "1000 Tree Plantation Campaign; Over a thousand trees were planted across the port city of Chittagong to support the movement of the renowned Youtuber, Mr Beast.",
         button: {
             exists: false,
         },
