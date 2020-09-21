@@ -1,0 +1,48 @@
+.totopbutton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    padding: 10px;
+}
+
+.totopbutton.hide {
+    display: none;
+}
+
+.totopbutton img {
+    animation: floating 1s infinite;
+}
+
+.totopbutton__content {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--secondary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.totopbutton__content:hover {
+    filter: brightness(120%);
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(1px) scale(0.6);
+    }
+    50% {
+        transform: translateY(-2px) scale(0.6);
+    }
+    100% {
+        transform: translateY(1px) scale(0.6);
+    }
+}
+
+@media (max-width: 850px) {
+    .totopbutton {
+        bottom: 20px;
+        right: 0px;
+    }
+}
